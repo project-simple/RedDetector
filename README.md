@@ -1,0 +1,2 @@
+# RedDetector
+Simple browser detector
