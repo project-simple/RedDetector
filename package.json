@@ -1,0 +1,31 @@
+{
+  "name": "project-simple-red-detector",
+  "version": "1.0.7",
+  "description": "Simple Browser Detector",
+  "scripts": {
+    "npmVersionPatch": "npm --no-git-tag-version version patch",
+    "npmPublish": "npm adduser && npm publish",
+    "test:browser": "live-server --port=9001 --entry-file=testRun_browser.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/project-simple/RedDetector.git"
+  },
+  "keywords": [
+    "loop",
+    "looper"
+  ],
+  "author": {
+    "name": "redcamel",
+    "email": "webseon@gmail.com",
+    "url": "https://github.com/redcamel"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/project-simple/RedDetector/issues"
+  },
+  "homepage": "https://github.com/project-simple/RedDetector",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
