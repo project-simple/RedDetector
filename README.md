@@ -12,6 +12,21 @@ github - [here](https://github.com/project-simple/RedDetector)
 ```npm
 npm install project-simple-red-detector --save-dev
 ```
+```
+import RedDetector from 'project-simple-red-detector';
+console.log(RedDetector.device);
+console.log(RedDetector.isMobile);
+console.log(RedDetector.browser);
+console.log(RedDetector.browserVer);
+console.log(RedDetector.os);
+console.log(RedDetector.osVer);
+console.log(RedDetector.down);
+console.log(RedDetector.move);
+console.log(RedDetector.up);
+console.log(RedDetector.over);
+console.log(RedDetector.out);
+console.log(RedDetector.up);
+```
 #### browser
 ```html
 <script src="https://project-simple.github.io/RedDetector/RedDetector.js"></script>
