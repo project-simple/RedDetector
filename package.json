@@ -1,6 +1,6 @@
 {
   "name": "project-simple-red-detector",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Simple Browser Detector",
   "scripts": {
     "npmVersionPatch": "npm --no-git-tag-version version patch",
@@ -25,6 +25,5 @@
     "url": "https://github.com/project-simple/RedDetector/issues"
   },
   "homepage": "https://github.com/project-simple/RedDetector",
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
