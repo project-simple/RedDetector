@@ -2,6 +2,7 @@
   "name": "project-simple-red-detector",
   "version": "1.0.8",
   "description": "Simple Browser Detector",
+  "main": "RedDetector.js",
   "scripts": {
     "npmVersionPatch": "npm --no-git-tag-version version patch",
     "npmPublish": "npm adduser && npm publish"
