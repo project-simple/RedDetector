@@ -3,99 +3,93 @@ Simple Loop Manager
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-[![NPM](https://nodei.co/npm/project-simple-red-looper.png)](https://npmjs.org/package/project-simple-red-looper)
+[![NPM](https://nodei.co/npm/project-simple-red-detector.png)](https://npmjs.org/package/project-simple-red-detector)
 
 github - [here](https://github.com/project-simple/RedDetector)
 
 # Install 
 #### npm 
 ```npm
-npm install project-simple-red-looper --save-dev
+npm install project-simple-red-detector --save-dev
 ```
 #### browser
 ```html
-<script src="https://project-simple.github.io/RedDetector/src/RedDetector.js"></script>
+<script src="https://project-simple.github.io/RedDetector/RedDetector.js"></script>
 <script>
-   RedDetector.addMainLoop('testMainLoop1',function(){ console.log('testMainLoop1')});
-   RedDetector.addMainLoop('testMainLoop1',function(){ console.log('testMainLoop1')});
-   // The registered loop is executed every frame.
+    console.log(RedDetector.device) // 'pc' or 'mobile' or 'tablet' 
 </script>
 ```
 
-# Run Cycle
-```
-per frame
-|--> run beforeLoops
-|----> run mainLoops
-|------> run afterLoops
-
-```
 
 # API
 
-#### RedDetector.addMainLoop(key:String, handler:Function)
-* Usage is the same for addBeforeLoop and addAfterLoop.
+#### RedDetector.device
+-return ```pc``` or ```mobile``` or ```tablet```
 ```javascript
-RedDetector.addMainLoop( 'test', function(){ console.log('test1' ) });
-```
-* "key" do not allow duplicates in individual loop lists.
-```javascript
-RedDetector.addMainLoop( 'testKey', function(){ }); // ok
-RedDetector.addMainLoop( 'testKey', function(){ }); // fail - already defined key!!
-// individual loop area
-RedDetector.addBeforeLoop( 'key_test', function(){ }); // ok
-RedDetector.addMainLoop( 'key_test', function(){ }); // ok
-RedDetector.addAfterLoop( 'key_test', function(){ }); // ok
-RedDetector.addBeforeLoop( 'key_test', function(){ }); // fail
-RedDetector.addMainLoop( 'key_test', function(){ }); // fail
-RedDetector.addAfterLoop( 'key_test', function(){ }); // fail
+console.log(RedDetector.device);
 ```
 
-#### RedDetector.getMainLoop(key)
-* Usage is the same for getBeforeLoop and getAfterLoop.
+#### RedDetector.isMobile
+- return ```true``` or ```false```
 ```javascript
-var getTest = function(){};
-RedDetector.addMainLoop( 'getTest', getTest);
-console.log( RedDetector.getMainLoop( 'getTest') == getTest); // true
+console.log(RedDetector.isMobile);
 ```
 
-#### RedDetector.getMainLoopList()
-* Usage is the same for getBeforeLoopList and getAfterLoopList.
+#### RedDetector.browser
+- return ```ie```, ```edge```, ```firefox```, ```chrome```, ```safari```, ```opera```, ```naver```, ```whale```
 ```javascript
-var getTest1 = function(){};
-console.log( RedDetector.getMainLoopList()); // []
-console.log( RedDetector.getMainLoopList().length); // 0
-RedDetector.addMainLoop( 'getTest1', getTest1);
-console.log( RedDetector.getMainLoopList()); // [getTest1]
-console.log( RedDetector.getMainLoopList().length); // 1 
+console.log(RedDetector.browser);
 ```
 
-#### RedDetector.hasMainLoop(key)
-* Usage is the same for hasBeforeLoop and hasAfterLoop.
+#### RedDetector.browserVer
+- return current browser version number
 ```javascript
-RedDetector.addMainLoop( 'hasTest', function(){});
-console.log( RedDetector.hasMainLoop( 'hasTest')); // true
-console.log( RedDetector.hasMainLoop( 'noHasTest')); // false
+console.log(RedDetector.browserVer);
 ```
 
-#### RedDetector.delMainLoop(key)
-* Usage is the same for delBeforeLoop and delAfterLoop.
+#### RedDetector.os
+- return ```win```, ```mac```, ```unix```, ```linux```, ```android```, ```iphone``` ,```ipad```
 ```javascript
-RedDetector.addMainLoop( 'delTest', function(){});
-console.log( RedDetector.hasMainLoop( 'delTest')); // true
-RedDetector.delMainLoop( 'delTest');
-console.log( RedDetector.hasMainLoop( 'delTest')); // false
+console.log(RedDetector.os);
 ```
-#### RedDetector.delAll()
+
+#### RedDetector.osVer
+- return current os version number
 ```javascript
-RedDetector.addBeforeLoop( 'delBeforeTest', function(){});
-RedDetector.addMainLoop( 'delMainTest', function(){});
-RedDetector.addAfterLoop( 'delAfterTest', function(){});
-console.log( RedDetector.hasBeforeLoop( 'delBeforeTest')); // true
-console.log( RedDetector.hasMainLoop( 'delMainTest')); // true
-console.log( RedDetector.hasAfterLoop( 'delAfterTest')); // true
-RedDetector.delAll();
-console.log( RedDetector.hasBeforeLoop( 'delBeforeTest')); // false
-console.log( RedDetector.hasMainLoop( 'delMainTest')); // false
-console.log( RedDetector.hasAfterLoop( 'delAfterTest')); // false
+console.log(RedDetector.osVer);
+```
+
+
+#### RedDetector.down
+- desktop : return ```mousedown```
+- mobile : return ```touchstart```
+```javascript
+console.log(RedDetector.down);
+```
+
+#### RedDetector.move
+- desktop : return ```mousemove```
+- mobile : return ```touchmove```
+```javascript
+console.log(RedDetector.move);
+```
+
+#### RedDetector.up
+- desktop : return ```mouseup```
+- mobile : return ```touchend```
+```javascript
+console.log(RedDetector.up);
+```
+
+
+#### RedDetector.over
+- desktop, mobile : return ```mouseover```
+```javascript
+console.log(RedDetector.over);
+```
+
+#### RedDetector.out
+- desktop, mobile : return ```mouseout```
+```javascript
+console.log(RedDetector.up);
 ```

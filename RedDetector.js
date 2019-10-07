@@ -84,7 +84,7 @@ Copyright (c) 2019 ~ By RedCamel.
 	} else os = app.indexOf('x11') > -1 ? 'unix' : app.indexOf('linux') > -1 ? 'linux' : 0, whale() || chrome() || firefox();
 	for (i in t0 = {
 		device: device,
-		isMobile: isMobile,
+		isMobile: isMobile == 1,
 		browser: browser,
 		browserVer: bv,
 		os: os,

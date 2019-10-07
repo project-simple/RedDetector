@@ -4,8 +4,7 @@
   "description": "Simple Browser Detector",
   "scripts": {
     "npmVersionPatch": "npm --no-git-tag-version version patch",
-    "npmPublish": "npm adduser && npm publish",
-    "test:browser": "live-server --port=9001 --entry-file=testRun_browser.html"
+    "npmPublish": "npm adduser && npm publish"
   },
   "repository": {
     "type": "git",
@@ -13,7 +12,8 @@
   },
   "keywords": [
     "loop",
-    "looper"
+    "looper",
+    "RedLooper"
   ],
   "author": {
     "name": "redcamel",
@@ -26,6 +26,5 @@
   },
   "homepage": "https://github.com/project-simple/RedDetector",
   "devDependencies": {
-    "live-server": "^1.2.1"
   }
 }
