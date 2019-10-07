@@ -102,7 +102,7 @@ console.log(RedDetector.over);
 #### RedDetector.out
 - desktop, mobile : return ```mouseout```
 ```javascript
-console.log(RedDetector.up);
+console.log(RedDetector.out);
 ```
 
 #### RedDetector.click
