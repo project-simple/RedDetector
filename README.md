@@ -29,7 +29,7 @@ console.log(RedDetector.up);
 ```
 #### browser
 ```html
-<script src="https://project-simple.github.io/RedDetector/RedDetector.js"></script>
+<script src="https://project-simple.github.io/RedDetector/dist/RedDetector.js"></script>
 <script>
     console.log(RedDetector.device); // 'pc' or 'mobile' or 'tablet' 
     console.log(RedDetector.isMobile);
